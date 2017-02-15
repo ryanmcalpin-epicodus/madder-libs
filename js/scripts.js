@@ -6,6 +6,8 @@ $(document).ready(function() {
     var exclamationInput = $("input#exclamation").val();
     var verbInput = $("input#verb").val();
     var nounInput = $("input#noun").val();
+    var adjectiveInput =
+    $("input#adjective").val();
 
     $(".person1").text(person1Input);
     $(".person2").text(person2Input);
@@ -13,6 +15,7 @@ $(document).ready(function() {
     $(".exclamation").text(exclamationInput);
     $(".verb").text(verbInput);
     $(".noun").text(nounInput);
+    $(".adjective").text(adjectiveInput);
 
     $("#story").show();
 
