@@ -21,4 +21,23 @@ $(document).ready(function() {
 
     event.preventDefault();
   });
+
+  $("#formLetter").submit(function(event) {
+    var userNameInput= $("input#userName").val();
+
+    $(".userName").text(userNameInput);
+    $("#letter").show();
+
+    event.preventDefault();
+  });
+
+  $("#formUpperCase").submit(function(event) {
+    var UpperCaseInput= $("input#UpperCase").val();
+
+    $(".UpperCase").text(UpperCaseInput.toUpperCase());
+
+    $("#UpperCaseName").show();
+
+    event.preventDefault();
+  });
 });
