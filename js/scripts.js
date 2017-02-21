@@ -1,21 +1,30 @@
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
-    var person1Input = $("input#person1").val();
-    var person2Input = $("input#person2").val();
-    var animalInput= $("input#animal").val();
-    var exclamationInput = $("input#exclamation").val();
-    var verbInput = $("input#verb").val();
-    var nounInput = $("input#noun").val();
-    var adjectiveInput =
-    $("input#adjective").val();
+    var inputs = ["person1", "person2", "animal", "exclamation", "verb", "noun", "adjective"];
 
-    $(".person1").text(person1Input);
-    $(".person2").text(person2Input);
-    $(".animal").text(animalInput);
-    $(".exclamation").text(exclamationInput);
-    $(".verb").text(verbInput);
-    $(".noun").text(nounInput);
-    $(".adjective").text(adjectiveInput);
+    // var person1 = $("input#person1").val();
+    // var person2 = $("input#person2").val();
+    // var animal= $("input#animal").val();
+    // var exclamation = $("input#exclamation").val();
+    // var verb = $("input#verb").val();
+    // var noun = $("input#noun").val();
+    // var adjective =
+    // $("input#adjective").val();
+
+
+    for (var index = 0; index < inputs.length; index +=1) {
+      var tag = inputs[index];
+      var userText = $("#" + tag).val();
+      $("." + tag).text(userText);
+    }
+
+    // $(".person1").text(person1Input);
+    // $(".person2").text(person2Input);
+    // $(".animal").text(animalInput);
+    // $(".exclamation").text(exclamationInput);
+    // $(".verb").text(verbInput);
+    // $(".noun").text(nounInput);
+    // $(".adjective").text(adjectiveInput);
 
     $("#story").show();
 
